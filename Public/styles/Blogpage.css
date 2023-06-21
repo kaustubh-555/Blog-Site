@@ -1,0 +1,39 @@
+#fullBlog{
+    /* border: 1px solid #8888; */
+    margin-block: 100px;
+    margin-inline: auto;
+    width: 80%;
+    height: fit-content;
+    background-color:#F5EFE7;
+    box-shadow: #8888 5px 5px;
+    border-radius: 20px;
+    padding: 50px;
+}
+#blogImg{
+    background: url("../images/one.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 700px;
+    height: 500px;
+    margin: auto;
+    border-radius: 10px;
+}
+.blogTitle{
+    margin: auto;
+    width: fit-content;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.title,.author{
+    color: black;
+    margin: 50px;
+}
+.content{
+    font-family: 'Arial Narrow Bold', sans-serif;
+    font-size: 1.5rem;
+}
+p{
+    margin: 20px;
+    color: black;
+}

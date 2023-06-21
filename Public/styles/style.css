@@ -1,0 +1,135 @@
+*{
+    margin: 0px;
+    border: none;
+    padding: 0px;
+    color: #213555;
+    
+}
+#navbar{
+    position: sticky;
+    top: 0;
+    display:flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #F5EFE7;
+}
+#authStrip{
+    display:flex;
+    justify-content: flex-end;
+}
+#authStrip a{
+    text-decoration: none;
+}
+
+.authBtn{
+    margin-inline-end: 30px;
+    text-align: center;
+    width: 70px;
+    padding: 10px;
+    border-radius: 20px;
+    /* background-color: rgb(8, 111, 237); */
+    background-color: #4F709C;
+    color: #F5EFE7;
+}
+
+.navItems{
+    display: grid;
+    grid-template-columns: 3fr 2fr 0.5fr;
+    margin-inline: 50px;
+    margin-block: 20px;
+}
+#searchBar{
+    display: flex;
+    height: 50px;
+}
+#searchText:focus{
+    outline: none;
+}
+#searchText,#searchBtn,.dummyele1,.dummyele2{
+    /* background-color: rgb(241, 235, 235); */
+    /* background-color: #D8C4B6; */
+    background-color: #cec6be;
+    padding: 10px;
+    font-size: 1.25rem;
+}
+.dummyele1{
+    border-radius: 0px 0px 0px 20px;
+}
+.dummyele2{
+    border-radius: 0px 20px 0px 0px;
+}
+#logo{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+}   
+#profile{
+    width:100%;
+    display: flex;
+    justify-content: right;
+}
+#mainContainer{
+    margin:auto;
+    width:90%;
+    display: flex;
+    padding:20px;
+    /* background-color: #F8F6F4; */
+}
+#blogList{
+    padding: 20px;
+    width:70%;
+}
+.blogs,.suggestionBlogs{
+    padding: 20px;
+    margin: auto;
+    width: fit-content;
+    background-color:#F5EFE7 ;
+    margin-block: 15px;
+    border-radius: 10px;
+    box-shadow: #8888 5px 5px;
+}
+.suggestionBlogs{
+    border:#8888 solid 2px;
+    width:fit-content;
+    font-size: 1.5rem;
+}
+#suggestionBlogsList{
+    margin-top: 40px;
+    background-color: #cec6be;
+    height: fit-content;
+    padding: 15px;
+    border-radius: 20px;
+}
+body{
+    background-color: #e3e2df;
+    color: #213555;
+}
+#abc{
+    padding: 50px;
+    font-size: 2rem; 
+    font-family:'Arial, sans-serif';
+    margin: 20px;
+}
+.suggestionBlogTitle{
+    width:80%;
+    padding: 10px;
+    font-size: 1.25rem;
+}
+.blogTitle{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.blogs:hover,.suggestionBlogs:hover{
+    cursor: pointer;
+}
+#footer{
+    height:fit-content;
+    background-color: #213555;
+    color: #F5EFE7;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-block: 60px;
+    padding-inline: 90px;
+    align-items: center;
+    font-size: 1.2rem;
+    line-height: 30px;
+}
