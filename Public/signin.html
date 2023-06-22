@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/authStyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="navItems">
+            <div id="logo">
+                Blogs4U
+            </div>
+            <div id="searchBar">
+                <div class="dummyele1">
+                     
+                </div>
+                <input type="text" id="searchText" placeholder="Search">
+                <button id="searchBtn">Q</button>
+                <div class="dummyele2">
+                     
+                </div>
+            </div>
+            <div id="profile">
+                <img src="../icons8-male-user-50.png" alt="">
+            </div>
+        </div>
+        
+    </nav>
+    <section id="signinContainer">
+        <h1>
+            Signin 
+        </h1>
+        <form id="signinForm">
+            <div class="formElements">
+                <label for="username">
+                    Username
+                </label>
+                <input type="text" id="username" class="feilds" placeholder="Email or username">
+            </div>
+            <div class="formElements">
+                <label for="password">
+                    Password
+                </label>
+                <input type="password" id="password" class="feilds" placeholder="password">
+            </div>
+            <div class="formElements">
+                <label for="radioBtn">
+                    Select Gender
+                </label>
+                <div id="radioBtn">
+                    <input type="radio" name="gender" value="male" class="radioBtn">Male
+                    <input type="radio" name="gender" value="female" class="radioBtn">Female
+                </div>
+            </div>
+            <div class="formElements">
+                <label for="role">
+                    Select Role
+                </label>
+                <select  id="role">
+                    <option value="student">Student</option>
+                    <option value="writer">Content Writer</option>
+                    <option value="org">Organisation</option>
+                </select>
+            </div>
+            <button id="signinBtn" class="authBtn">SignIn</button>
+        </form>
+    </section>
+    <section id="footer">
+        <div id="logo" style="color:#ffff;">
+            Blog4U
+        </div>
+        <div class="col1" style="color:#ffff;">
+                    About
+                <br>
+                <br>
+                Address :
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui, quasi.
+                <br>
+                Contact: 12345678910
+                <br>
+                mail: <a href="mailto:kaustubh517suroshi@gmail.com" style="color: #F5EFE7;"> kaustubh suroshi</a>
+
+            </div>
+        </div>
+        <div class="col" style="color:#ffff;">
+
+        </div>
+        <div class="col2" style="color:#ffff;">
+            Connect with Us <br>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+        </div>
+    </section>
+</body>
+</html>

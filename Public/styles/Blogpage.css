@@ -1,10 +1,9 @@
 #fullBlog{
-    /* border: 1px solid #8888; */
     margin-block: 100px;
     margin-inline: auto;
     width: 80%;
     height: fit-content;
-    background-color:#F5EFE7;
+    background-color:#ffff;
     box-shadow: #8888 5px 5px;
     border-radius: 20px;
     padding: 50px;

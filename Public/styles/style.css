@@ -11,7 +11,8 @@
     display:flex;
     flex-direction: column;
     padding: 20px;
-    background-color: #F5EFE7;
+    background-color: #ffff;
+    box-shadow: 0 2px 4px #00000026; 
 }
 #authStrip{
     display:flex;
@@ -29,7 +30,7 @@
     border-radius: 20px;
     /* background-color: rgb(8, 111, 237); */
     background-color: #4F709C;
-    color: #F5EFE7;
+    color: #ffff;
 }
 
 .navItems{
@@ -48,7 +49,7 @@
 #searchText,#searchBtn,.dummyele1,.dummyele2{
     /* background-color: rgb(241, 235, 235); */
     /* background-color: #D8C4B6; */
-    background-color: #cec6be;
+    background-color: #e7edf4;
     padding: 10px;
     font-size: 1.25rem;
 }
@@ -77,12 +78,13 @@
 #blogList{
     padding: 20px;
     width:70%;
+    margin-inline-end: 50px;
 }
 .blogs,.suggestionBlogs{
     padding: 20px;
     margin: auto;
     width: fit-content;
-    background-color:#F5EFE7 ;
+    background-color:#ffff ;
     margin-block: 15px;
     border-radius: 10px;
     box-shadow: #8888 5px 5px;
@@ -93,14 +95,15 @@
     font-size: 1.5rem;
 }
 #suggestionBlogsList{
+    box-shadow: #8888 -5px 5px;
     margin-top: 40px;
-    background-color: #cec6be;
+    background-color: #c0c5cd;
     height: fit-content;
     padding: 15px;
     border-radius: 20px;
 }
 body{
-    background-color: #e3e2df;
+    background-color: #e7edf4;
     color: #213555;
 }
 #abc{
@@ -124,7 +127,7 @@ body{
 #footer{
     height:fit-content;
     background-color: #213555;
-    color: #F5EFE7;
+    color: #ffff;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding-block: 60px;
@@ -132,4 +135,40 @@ body{
     align-items: center;
     font-size: 1.2rem;
     line-height: 30px;
+}
+.fa {
+    padding: 10px;
+    font-size: 2rem;
+    width: fit-content;
+    text-align: center;
+    text-decoration: none;
+    margin-inline-end: 10px;
+    margin-block: 10px;
+    border-radius: 50%;
+  }
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+.fa-instagram{
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    color: white;
+  }
+.fa-linkedin{
+    background: #0077b5;
+    color: white;
+}
+.col2{
+    padding: 20px;
+    font-size: 1.5rem;
 }
