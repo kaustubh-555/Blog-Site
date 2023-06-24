@@ -3,7 +3,6 @@
     border: none;
     padding: 0px;
     color: #213555;
-    
 }
 #navbar{
     position: sticky;
@@ -38,6 +37,9 @@
     grid-template-columns: 3fr 2fr 0.5fr;
     margin-inline: 50px;
     margin-block: 20px;
+}
+.navItems a{
+    text-decoration: none;
 }
 #searchBar{
     display: flex;

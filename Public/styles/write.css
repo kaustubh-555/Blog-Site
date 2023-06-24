@@ -1,0 +1,47 @@
+#writeContainer{
+    height: fit-content;
+    margin-inline: auto;
+    padding: 30px;
+    width: 80%;
+    margin-block: 100px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: #8888 4px 4px;
+    font-size: 1.5rem;
+}
+#createForm{
+    height: 100%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#blogContents{
+    font-size: 1.5rem;
+    resize: none;
+}
+#textarea{
+    margin-left: 100px;
+    width: fit-content;
+    border-radius: 20px;
+    padding: 20px;
+    border: #8888 solid 1px;
+    overflow: auto;
+}
+#textarea :focus{
+    outline: none;
+}
+#Tags{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: 100%;
+    margin-block-start: 50px ;
+    margin-block-end: 100px ;
+    margin-inline-start: 80px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.checkbox{
+    display: flex;
+    justify-content: space-evenly;
+    
+}

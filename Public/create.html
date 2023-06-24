@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Write a Blog</title>
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/write.css">
     <link rel="stylesheet" href="./styles/authStyles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -12,11 +13,9 @@
 <body>
     <nav id="navbar">
         <div class="navItems">
-            <a href="index.html">
-                <div id="logo">
-                    Blogs4U
-                </div>
-            </a>
+            <div id="logo">
+                Blogs4U
+            </div>
             <div id="searchBar">
                 <div class="dummyele1">
                      
@@ -33,27 +32,46 @@
         </div>
         
     </nav>
-    <section id="login-container">
+
+    <section id="writeContainer">
         <h1>
-            Login 
+            Write a Blog
         </h1>
-        <form id="loginForm">
-            <div class="formElements">
-                <label for="username">
-                    Username
-                </label>
-                <input type="text" id="username" class="feilds" placeholder="Email or username">
-            </div>
-            <div class="formElements">
-                <label for="password">
-                    Password
-                </label>
-                <input type="password" id="password" class="feilds" placeholder="password">
-            </div>
-            <a href="signin.html" id="createAccountLink">Create new Account </a>
-            <button id="loginBtn" class="authBtn">Login</button>
-        </form>
+            <form id="createForm">
+                <div class="formElements">
+                    <label for="blogTitle">
+                        Title
+                    </label>
+                    <input type="text" id="Title" class="feilds" placeholder="Enter the title of the blog" required>
+                </div>
+                <div class="formElements" id="textarea">
+                    <textarea id="blogContents" cols="70" rows="20" placeholder="Write Blog Here"></textarea>
+                </div>
+                <div  id="Tags">
+                    <label>
+                        Choose tags :
+                    </label>
+                    <div class="checkbox">
+                        <input type="checkbox" id="tags"  value="sports">Sports
+                    </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="tags"  value="cybersecurity">CyberSecurity
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="tags"  value="entertainment">Entertainment
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="tags"  value="nature">Nature
+                        </div>
+                    </div>
+
+                </div>
+                <button id="submitBtn" class="authBtn">Submit</button>
+    
+            </form>
     </section>
+
+
     <section id="footer">
         <div id="logo" style="color:#ffff;">
             Blog4U
@@ -82,5 +100,6 @@
             <a href="#" class="fa fa-linkedin"></a>
         </div>
     </section>
+    
 </body>
 </html>
