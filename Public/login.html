@@ -42,16 +42,16 @@
                 <label for="username">
                     Username
                 </label>
-                <input type="text" id="username" class="feilds" placeholder="Email or username">
+                <input type="text" id="username" class="feilds" placeholder="Email or username" required>
             </div>
             <div class="formElements">
                 <label for="password">
                     Password
                 </label>
-                <input type="password" id="password" class="feilds" placeholder="password">
+                <input type="password" id="password" class="feilds" placeholder="password" required>
             </div>
             <a href="signin.html" id="createAccountLink">Create new Account </a>
-            <button id="loginBtn" class="authBtn">Login</button>
+            <button type="submit" id="loginBtn" class="authBtn">Login</button>
         </form>
     </section>
     <section id="footer">
@@ -82,5 +82,6 @@
             <a href="#" class="fa fa-linkedin"></a>
         </div>
     </section>
+    <script src="./scripts/loginScript.js"></script>
 </body>
 </html>
