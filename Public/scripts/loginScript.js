@@ -15,11 +15,10 @@ loginBtn.addEventListener('click',(e)=>{
         })
 
     }).then((response)=>{
-        // const cookies = response.headers.get('refreshToken');
-        // console.log(cookies);
         return response.json()
     }).then(json=>{
         document.cookie = `AccessToken=${json.AccessToken}`;
+        document.cookie=`username=${json.username}`;
         console.log(json);
         document.location.href="./index.html"
     })

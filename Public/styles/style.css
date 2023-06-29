@@ -37,6 +37,7 @@
     grid-template-columns: 3fr 2fr 0.5fr;
     margin-inline: 50px;
     margin-block: 20px;
+    align-items: center;
 }
 .navItems a{
     text-decoration: none;
@@ -69,6 +70,12 @@
     width:100%;
     display: flex;
     justify-content: right;
+    align-items: center;
+
+}
+#username-display{
+    font-family:'Arial Narrow Bold', sans-serif;
+    margin-inline: 20px;
 }
 #mainContainer{
     margin:auto;

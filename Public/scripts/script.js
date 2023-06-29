@@ -1,5 +1,11 @@
 let count =0;
+let usernameDisplay=document.getElementById("username-display")
 let blogsList = document.getElementsByClassName("blogs")
+let allCookies = document.cookie;
+allCookies=allCookies.split(';')
+let accessToken=false;
+let refreshToken=false;
+let use=""
 blogsList=Array.from(blogsList)
 blogsList.forEach(element=>{
     element.addEventListener('click',(e)=>{
@@ -15,15 +21,15 @@ blogsList.forEach(element=>{
         e.preventDefault();
     })
 })
-let allCookies = document.cookie;
-allCookies=allCookies.split(';')
-let accessToken=false;
-let refreshToken=false;
 for(let i=0;i<allCookies.length;i++){
     let coo = allCookies[i].trim();
     if(coo.indexOf("AccessToken")==0){
         accessToken=coo.substring(12);
+        console.log(accessToken)
         break
+    }
+    if(coo.indexOf("username")==0){
+        use=coo.substring(9)
     }
 }
 let loginStrip=document.getElementById("authStrip")
@@ -42,6 +48,7 @@ function checkAccessToken(){
         console.log(data);
         if(data.status=="verified"){
             loginStrip.remove()
+            usernameDisplay.innerHTML=use
             AuthStatus=true;
         }
         else{
@@ -62,12 +69,13 @@ function refresh(){
     }).then(data=>{
         if(data.status==true){
             console.log({"accessToken" : data.accessToken})
-            document.cookie=`AccessToken: ${data.accessToken}`
+            document.cookie=`AccessToken= ${data.accessToken}`
             accessToken=data.accessToken;
+            usernameDisplay.innerHTML=data.username;
             checkAccessToken();
         }
         else{
-            console.log("failed !")
+            console.log(data.status)
         }
     })
 }

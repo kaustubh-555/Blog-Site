@@ -3,6 +3,7 @@ const app=express()
 const router = express.Router();
 const path =require("path")
 const {loginControler,auth,refresh} = require("../Controlers/loginControler")
+const signinControler = require("../Controlers/signinControler")
 router.get("/",(req,res)=>{
     res.sendFile(path.join(__dirname,"..","Public","index.html"))
 })
@@ -29,4 +30,5 @@ router.get("*.png",(req,res)=>{
 router.post("/login",loginControler)
 router.post("/auth",auth)
 router.get("/refresh",refresh)
+router.post("/signin",signinControler);
 module.exports = router

@@ -28,7 +28,8 @@ const loginControler = (req,res)=>{
                 let token=jwt.sign(userobj,process.env.ACCESS_SECRET_KEY,{expiresIn:"30s"})
                 let refToken = jwt.sign(userobj,process.env.REFRESH_SECRET_KEY,{expiresIn:"1d"})
                 res.cookie("RefreshToken",refToken,{httpOnly:true})
-                res.json({"AccessToken" : token});
+                userobj.AccessToken=token
+                res.json(userobj);
                 userobj.refreshToken=refToken
                 for(let i=0;i<tokens.tokenList.length;i++){
                     if(userobj.username==tokens.tokenList[i].username){
@@ -63,7 +64,8 @@ const refresh=(req,res)=>{
                     let newToken = jwt.sign(userobj,process.env.ACCESS_SECRET_KEY,{expiresIn:"30s"})
                     let refreshobj = {
                         status: true,
-                        accessToken: newToken
+                        accessToken: newToken,
+                        username: tokens.tokenList[i].username
                     }
                     res.json(refreshobj)
                     return
@@ -98,7 +100,7 @@ const auth = (req,res)=>{
         }
     }catch(err){
         console.log(err.message)
-        res.json({status : "expired"})    
+        res.json({status : "verification Failed"})    
     }
 }
 module.exports = {loginControler,auth,refresh};
