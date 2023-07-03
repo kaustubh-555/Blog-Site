@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
     <nav id="navbar">
@@ -28,7 +31,76 @@
     </nav>
     <section id="mainProfile">
         
+        <div class="contents">
+            <label for="username">
+                Name
+            </label>
+            <div id="username">
+    
+            </div>
+            
+        </div>
+        <div class="contents">
+            <label for="role">
+                Role
+            </label>
+            <div id="role">
+    
+            </div>
+            
+        </div>
+        <div class="contents">
+            <label for="gender">
+                Gender
+            </label>
+            <div id="gender">
+    
+            </div>
+        </div>
+        <div id="blogsWritten">
+            <label for="blogWrittenList">
+                Your Blogs
+            </label>
+            <ul id="blogWrittenList">
+                <div id="empty">
+                    You have not written any blogs
+                </div>
+            </ul>
+        </div>
+        <button id="logoutBtn" class="authBtn">
+            Logout
+        </button>
     </section>
+
+    <section id="footer">
+        <div id="logo" style="color:#ffff;">
+            Blog4U
+        </div>
+        <div class="col1" style="color:#ffff;">
+                    About
+                <br>
+                <br>
+                Address :
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui, quasi.
+                <br>
+                Contact: 12345678910
+                <br>
+                mail: <a href="mailto:kaustubh517suroshi@gmail.com" style="color: #F5EFE7;"> kaustubh suroshi</a>
+
+            </div>
+        </div>
+        <div class="col" style="color:#ffff;">
+
+        </div>
+        <div class="col2" style="color:#ffff;">
+            Connect with Us <br>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+        </div>
+    </section>
+
     <script src="./scripts/profileScript.js"></script>
 </body>
 </html>

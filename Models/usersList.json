@@ -1,1 +1,14 @@
-[{"username":"kaustubh","password":"123","gender":"male","role":"org","AccessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImthdXN0dWJoIiwicGFzc3dvcmQiOiIxMjMiLCJnZW5kZXIiOiJtYWxlIiwicm9sZSI6Im9yZyIsImlhdCI6MTY4Nzk4MTc5NywiZXhwIjoxNjg3OTgxODI3fQ.DfMYynapCl1WKgK4Xta-yzGUf83tUVa_Cz_BbIwxXHk"},{"username":"kas","password":"it","gender":"male","role":"writer","AccessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImthcyIsInBhc3N3b3JkIjoiaXQiLCJnZW5kZXIiOiJtYWxlIiwicm9sZSI6IndyaXRlciIsImlhdCI6MTY4Nzk4MTkyNiwiZXhwIjoxNjg3OTgxOTU2fQ.5lbYuYPDo-hbVD_iBREcTILFVf27wEOoPRRwXalpHDg"},{"username":"gcc","password":"456","gender":"female","role":"student","AccessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImdjYyIsInBhc3N3b3JkIjoiNDU2IiwiZ2VuZGVyIjoiZmVtYWxlIiwicm9sZSI6InN0dWRlbnQiLCJpYXQiOjE2ODgwNTQzMTksImV4cCI6MTY4ODA1NDM0OX0.eYCE93YSe606nNk-lfsH4LX7x9f8IkvDb34C2t_xC5g"}]
+[
+    {
+        "username": "kaustubh",
+        "password": "123",
+        "gender": "male",
+        "role": "student"
+    },
+    {
+        "username": "kas",
+        "password": "456",
+        "gender": "male",
+        "role": "writer"
+    }
+]

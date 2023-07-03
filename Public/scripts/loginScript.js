@@ -18,7 +18,6 @@ loginBtn.addEventListener('click',(e)=>{
         return response.json()
     }).then(json=>{
         document.cookie = `AccessToken=${json.AccessToken}`;
-        document.cookie=`username=${json.username}`;
         console.log(json);
         document.location.href="./index.html"
     })

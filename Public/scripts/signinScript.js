@@ -16,10 +16,8 @@ signinBtn.addEventListener('click',(e)=>{
     }).then((response)=>{
         return response.json()
     }).then(json=>{
-        // document.cookie= `AccessToken=${json.AccessToken}`
-        // document.cookie=`username=${json.username}`;
-        document.location.href="../login.html"
         console.log(json);
+        document.location.href="./login.html"
     })
     e.preventDefault();
 })

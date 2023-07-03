@@ -1,11 +1,4 @@
-let count =0;
-let usernameDisplay=document.getElementById("username-display")
 let blogsList = document.getElementsByClassName("blogs")
-let allCookies = document.cookie;
-allCookies=allCookies.split(';')
-let accessToken=false;
-let refreshToken=false;
-let use=""
 blogsList=Array.from(blogsList)
 blogsList.forEach(element=>{
     element.addEventListener('click',(e)=>{
@@ -21,6 +14,11 @@ blogsList.forEach(element=>{
         e.preventDefault();
     })
 })
+
+
+let allCookies = document.cookie;
+allCookies=allCookies.split(';')
+let accessToken;
 for(let i=0;i<allCookies.length;i++){
     let coo = allCookies[i].trim();
     if(coo.indexOf("AccessToken")==0){
@@ -28,54 +26,50 @@ for(let i=0;i<allCookies.length;i++){
         console.log(accessToken)
         break
     }
-    if(coo.indexOf("username")==0){
-        use=coo.substring(9)
-    }
 }
+
 let loginStrip=document.getElementById("authStrip")
-let AuthStatus=false;
-function checkAccessToken(){
-    if(count ==5){
-        return
-    }
-    fetch('/auth',{
-        method: 'POST',
-        headers : {'Content-Type':'application/json'},
-        body: JSON.stringify({"token": accessToken})
-    }).then(response=>{
-        return response.json()
-    }).then(data=>{
-        console.log(data);
-        if(data.status=="verified"){
-            loginStrip.remove()
-            usernameDisplay.innerHTML=use
-            AuthStatus=true;
-        }
-        else{
-            count++;
-            refresh();
-        }
-    })
-}
-if(accessToken!=false){
-    checkAccessToken()
-}
-function refresh(){
-    fetch('/refresh',{
+let usernameDisplay=document.getElementById("username-display")
+const refresh=()=>{
+    fetch("http://localhost:3500/refresh",
+    {
         method: 'GET',
-        headers : {'Content-Type':'application/json'},
-    }).then(response=>{
+        headers: {"Content-Type":"application/json"},
+    }
+    ).then(response=>{
         return response.json()
     }).then(data=>{
-        if(data.status==true){
-            console.log({"accessToken" : data.accessToken})
-            document.cookie=`AccessToken= ${data.accessToken}`
-            accessToken=data.accessToken;
-            usernameDisplay.innerHTML=data.username;
-            checkAccessToken();
+        document.cookie = `AccessToken=${data.AccessToken}`;
+    })
+    update()
+}
+const update=()=>{
+    loginStrip.remove()
+}
+const auth=()=>{
+    fetch("http://localhost:3500/auth",
+    {
+        method: 'POST',
+        headers: {"Content-Type":"application/json"},
+        body: JSON.stringify({"AccessToken":accessToken})
+    }
+    ).then(response=>{
+        return response.json()
+    }).then(data=>{
+        if(data.status=='verified'){
+            update()
+        }
+        else if(data.status=='expired'){
+            refresh()
         }
         else{
-            console.log(data.status)
+            document.cookie="AccessToken = k; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+            // document.location.href="./index.html"
+            console.log("logged Out!")
         }
+        console.log(data)
     })
+}
+if(accessToken!=undefined){
+    auth()
 }
