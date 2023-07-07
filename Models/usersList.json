@@ -1,14 +1,1 @@
-[
-    {
-        "username": "kaustubh",
-        "password": "123",
-        "gender": "male",
-        "role": "student"
-    },
-    {
-        "username": "kas",
-        "password": "456",
-        "gender": "male",
-        "role": "writer"
-    }
-]
+[{"username":"kaustubh","password":"123","gender":"male","role":"student"},{"username":"kas","password":"456","gender":"male","role":"writer"},{"username":"gcc","password":"7896","gender":"male","role":"student"}]

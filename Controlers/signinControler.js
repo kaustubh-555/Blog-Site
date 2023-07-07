@@ -1,11 +1,10 @@
-const jwt =require("jsonwebtoken")
-const path=require("path")
-const fspromises = require("fs").promises
-const signinControler=(req,res)=>{
+const User=require("../Models/userSchema")
+
+const signinControler=async(req,res)=>{
     let userobj=req.body;
-    let usersList=require("../Models/usersList.json")
-    let newUsersList=[...usersList,userobj]
-    fspromises.writeFile(path.join(__dirname,"..","Models","usersList.json"),JSON.stringify(newUsersList))
+    const result =await User.create(userobj)
+    console.log(result)
     res.json(userobj)
 }
+
 module.exports=signinControler

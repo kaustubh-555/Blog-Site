@@ -6,6 +6,7 @@ const loginControler=require("../Controlers/loginControler")
 const signinControler=require("../Controlers/signinControler")
 const {refresh,auth}=require("../Controlers/tokenRefresher")
 const userdetails=require("../Controlers/profile")
+const addBlog=require("../Controlers/addBlog")
 router.get("/",(req,res)=>{
     res.sendFile(path.join(__dirname,"..","Public","index.html"))
 })
@@ -34,4 +35,5 @@ router.post("/login",loginControler)
 router.post("/signin",signinControler)
 router.get("/refresh",refresh)
 router.get("/userdetails",userdetails)
+router.post("/create",addBlog)
 module.exports = router

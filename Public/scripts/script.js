@@ -43,6 +43,7 @@ const refresh=()=>{
     })
     update()
 }
+let add=document.getElementById("create")
 const update=()=>{
     loginStrip.remove()
 }
@@ -73,3 +74,13 @@ const auth=()=>{
 if(accessToken!=undefined){
     auth()
 }
+
+add.addEventListener('click',(e)=>{
+    e.preventDefault();
+    if(accessToken==undefined){
+        confirm("Please login to write a blog")
+    }
+    else{
+        document.location.href="./create.html"
+    }
+})

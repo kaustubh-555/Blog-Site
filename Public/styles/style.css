@@ -181,3 +181,14 @@ body{
     padding: 20px;
     font-size: 1.5rem;
 }
+#create{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    font-size: 4rem;
+    height: fit-content;
+    width: fit-content;
+}
+#create:hover{
+    cursor: pointer;
+}
