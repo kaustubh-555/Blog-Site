@@ -1,13 +1,16 @@
 let blogsList = document.getElementsByClassName("blogs")
 blogsList=Array.from(blogsList)
+
 blogsList.forEach(element=>{
     element.addEventListener('click',(e)=>{
         document.location.href="./blog.html"
         e.preventDefault();
     })
 })
+
 blogsList = document.querySelectorAll(".suggestionBlogs")
 blogsList=Array.from(blogsList);
+
 blogsList.forEach(element=>{
     element.addEventListener('click',(e)=>{
         document.location.href="./blog.html"
@@ -19,6 +22,7 @@ blogsList.forEach(element=>{
 let allCookies = document.cookie;
 allCookies=allCookies.split(';')
 let accessToken;
+
 for(let i=0;i<allCookies.length;i++){
     let coo = allCookies[i].trim();
     if(coo.indexOf("AccessToken")==0){
@@ -30,6 +34,7 @@ for(let i=0;i<allCookies.length;i++){
 
 let loginStrip=document.getElementById("authStrip")
 let usernameDisplay=document.getElementById("username-display")
+
 const refresh=()=>{
     fetch("http://localhost:3500/refresh",
     {
@@ -43,10 +48,13 @@ const refresh=()=>{
     })
     update()
 }
+
 let add=document.getElementById("create")
+
 const update=()=>{
     loginStrip.remove()
 }
+
 const auth=()=>{
     fetch("http://localhost:3500/auth",
     {
@@ -65,12 +73,13 @@ const auth=()=>{
         }
         else{
             document.cookie="AccessToken = k; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-            // document.location.href="./index.html"
+            document.location.href="./index.html"
             console.log("logged Out!")
         }
         console.log(data)
     })
 }
+
 if(accessToken!=undefined){
     auth()
 }

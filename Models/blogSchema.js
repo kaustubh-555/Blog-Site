@@ -1,5 +1,9 @@
 const mongoose=require("mongoose")
 const blogSchema = mongoose.Schema({
+    blogId: {
+        type: Number,
+        required: true
+    },
     username: {
         type: String,
         required: true
