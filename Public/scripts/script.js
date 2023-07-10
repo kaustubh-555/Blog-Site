@@ -1,23 +1,71 @@
-let blogsList = document.getElementsByClassName("blogs")
-blogsList=Array.from(blogsList)
+let blogsList = document.getElementById("blogList")
 
-blogsList.forEach(element=>{
+fetch("/homeBlogs",{
+    method: 'GET',
+    headers: {"Content-Type":"application/json"},
+}).then(response=>{
+    return response.json();
+}).then(data=>{
+    console.log(data)
+    let images=["one.jpg","two.jpg","three.jpg","four.jpg","five.jpg"]
+    let count=0;
+    data.forEach(element=>{
+        if(count>4){
+            count=0;
+        }
+        
+        let newblog=document.createElement('div');
+        newblog.className="blogs";
+        
+        let blogtitle=document.createElement('div');
+        blogtitle.className="blogTitle";
+        
+        let blogImage=document.createElement('div');
+        blogImage.className="blogImage";
+        
+        let blogimg=document.createElement('img');
+        blogimg.src="./images/"+images[count];
+        blogimg.width=800
+        blogimg.height=500
+        
+        blogtitle.textContent=element.title
+        
+        blogImage.appendChild(blogimg)
+        newblog.appendChild(blogImage)
+        newblog.appendChild(blogtitle)
+        blogsList.appendChild(newblog)
+
+        newblog.addEventListener('click',(e)=>{
+            e.preventDefault();
+            let val=element._id
+            let url="./blog.html?id="+encodeURIComponent(val)
+            window.location.href=url
+        })
+
+        count++;
+    })
+})
+
+
+
+let allBlogs=document.getElementsByClassName("blogs")
+allBlogs=Array.from(allBlogs)
+allBlogs.forEach(element=>{
     element.addEventListener('click',(e)=>{
         document.location.href="./blog.html"
         e.preventDefault();
     })
 })
 
-blogsList = document.querySelectorAll(".suggestionBlogs")
-blogsList=Array.from(blogsList);
+allBlogs = document.querySelectorAll(".suggestionBlogs")
+allBlogs=Array.from(blogsList);
 
-blogsList.forEach(element=>{
+allBlogs.forEach(element=>{
     element.addEventListener('click',(e)=>{
         document.location.href="./blog.html"
         e.preventDefault();
     })
 })
-
 
 let allCookies = document.cookie;
 allCookies=allCookies.split(';')

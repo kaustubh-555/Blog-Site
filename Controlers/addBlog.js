@@ -15,4 +15,26 @@ const addBlog=async (req,res)=>{
     }
 }
 
-module.exports = addBlog
+const getHomeBlogs=async (req,res)=>{
+    try{
+        let blogsList=await Blogs.find({}).select({username:true,title:true,content:true,blogId:true})
+        res.json(blogsList)
+    }
+    catch(err){
+        console.log(err.message)
+    }
+}
+
+const getBlogById=async(req,res)=>{
+    try{
+        console.log(req.url)
+        let id=req.url.substring(req.url.lastIndexOf('/')+1)
+        console.log(id)
+        let blog=await Blogs.find({_id:id})
+        res.json(blog)
+    }catch(err){
+        console.log(err.message)
+    }
+}
+
+module.exports = {addBlog,getHomeBlogs,getBlogById}

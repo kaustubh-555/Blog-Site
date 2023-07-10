@@ -38,6 +38,7 @@ if(accessToken!=undefined){
                     content: content
                 }  
                 sub(blog) 
+                document.location.href="./index.html"
             })
 
         }

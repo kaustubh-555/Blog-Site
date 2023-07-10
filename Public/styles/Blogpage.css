@@ -19,12 +19,13 @@
 }
 .blogTitle{
     margin: auto;
-    width: fit-content;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .title,.author{
+
     color: black;
     margin: 50px;
 }
