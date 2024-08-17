@@ -1,5 +1,9 @@
 const Blogs=require("../Models/blogSchema")
 
+const cloudinary=require("./config/cloudinary")
+const multer=require("./Middleware/multer")
+
+
 const addBlog=async (req,res)=>{
     console.log(req.body)
     try{

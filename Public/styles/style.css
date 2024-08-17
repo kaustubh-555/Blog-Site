@@ -27,14 +27,14 @@
     width: 70px;
     padding: 10px;
     border-radius: 20px;
-    /* background-color: rgb(8, 111, 237); */
     background-color: #4F709C;
     color: #ffff;
 }
 
 .navItems{
     display: grid;
-    grid-template-columns: 3fr 2fr 0.5fr;
+    grid-template-columns: 4fr 1fr 0.5fr;
+    align-items: center;
     margin-inline: 50px;
     margin-block: 20px;
     align-items: center;
@@ -42,16 +42,34 @@
 .navItems a{
     text-decoration: none;
 }
+#searchContainer{
+    position: fixed;
+    top: 40px;
+    left: 55vw;
+    display: flex;
+    flex-direction: column; 
+}
+#slist {
+    list-style: none;
+    background-color: #e7edf4;
+    padding: 10px;
+    font-size: 1.25rem;
+    border-radius: 0px 0px 10px 10px; 
+    display: none;
+}
+#slist li{
+    padding: 5px;
+    border-top: 1px #213555 solid;
+}
 #searchBar{
     display: flex;
     height: 50px;
+    margin-top: 30px;
 }
 #searchText:focus{
     outline: none;
 }
 #searchText,#searchBtn,.dummyele1,.dummyele2{
-    /* background-color: rgb(241, 235, 235); */
-    /* background-color: #D8C4B6; */
     background-color: #e7edf4;
     padding: 10px;
     font-size: 1.25rem;
@@ -71,7 +89,6 @@
     display: flex;
     justify-content: right;
     align-items: center;
-
 }
 #username-display{
     font-family:'Arial Narrow Bold', sans-serif;
@@ -82,21 +99,6 @@
     width:90%;
     display: flex;
     padding:20px;
-    /* background-color: #F8F6F4; */
-}
-#blogList{
-    padding: 20px;
-    width:70%;
-    margin-inline-end: 50px;
-}
-.blogs,.suggestionBlogs{
-    padding: 20px;
-    margin: auto;
-    width: fit-content;
-    background-color:#ffff ;
-    margin-block: 15px;
-    border-radius: 10px;
-    box-shadow: #8888 5px 5px;
 }
 .suggestionBlogs{
     border:#8888 solid 2px;
@@ -120,18 +122,6 @@ body{
     font-size: 2rem; 
     font-family:'Arial, sans-serif';
     margin: 20px;
-}
-.suggestionBlogTitle{
-    width:80%;
-    padding: 10px;
-    font-size: 1.25rem;
-}
-.blogTitle{
-    font-size: 2rem;
-    font-weight: bold;
-}
-.blogs:hover,.suggestionBlogs:hover{
-    cursor: pointer;
 }
 #footer{
     height:fit-content;

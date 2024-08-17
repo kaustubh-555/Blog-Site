@@ -19,10 +19,13 @@
   "homepage": "https://github.com/kaustubh-555/Blog-Site#readme",
   "dependencies": {
     "bcrypt": "^5.1.0",
+    "cloudinary": "^2.2.0",
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "express-fileupload": "^1.5.0",
     "jsonwebtoken": "^9.0.0",
-    "mongoose": "^7.3.1"
+    "mongoose": "^7.3.1",
+    "multer": "^1.4.5-lts.1"
   }
 }
